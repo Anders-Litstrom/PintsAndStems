@@ -3,7 +3,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native'
 import RootDrawerNavigator from './Routes/Drawer'
 import Realm from 'realm';
-import { AppProvider } from '@realm/react'
+import { AppProvider, UserProvider } from '@realm/react'
 import { BevContextProvider, AuthContextProvider, appId } from './Shared/StateManagement'
 import {createDrawerNavigator} from '@react-navigation/drawer';
 
@@ -23,20 +23,22 @@ const App = () => {
   return (
 		<NavigationContainer>
 			<AppProvider id={appId}>
-				<AuthContextProvider>
-					<BevContextProvider>
-						<Drawer.Navigator>
-							<Drawer.Screen name="HomeStack" component={HomeStack} options={{ headerShown: false }} />
-							<Drawer.Screen name="MyListStack" component={MyListStack} options={{ headerShown: false }} />
-							<Drawer.Screen name="ProfileStack" component={ProfileStack} options={{ headerShown: false }} />
-							<Drawer.Screen name="WineIntroStack" component={WineIntroStack} options={{ headerShown: false }} />
-							<Drawer.Screen name="BeerIntroStack" component={BeerIntroStack} options={{ headerShown: false }} />
-							<Drawer.Screen name="QuizHomeStack" component={QuizHomeStack} options={{ headerShown: false }} />
-							<Drawer.Screen name="LogInStack" component={LogInStack} options={{ headerShown: false }} />
-							<Drawer.Screen name="SignUpStack" component={SignUpStack} options={{ headerShown: false }} />
-						</Drawer.Navigator>
-					</BevContextProvider>
-				</AuthContextProvider>
+				<UserProvider>
+					<AuthContextProvider>
+						<BevContextProvider>
+							<Drawer.Navigator>
+								<Drawer.Screen name="HomeStack" component={HomeStack} options={{ headerShown: false }} />
+								<Drawer.Screen name="MyListStack" component={MyListStack} options={{ headerShown: false }} />
+								<Drawer.Screen name="ProfileStack" component={ProfileStack} options={{ headerShown: false }} />
+								<Drawer.Screen name="WineIntroStack" component={WineIntroStack} options={{ headerShown: false }} />
+								<Drawer.Screen name="BeerIntroStack" component={BeerIntroStack} options={{ headerShown: false }} />
+								<Drawer.Screen name="QuizHomeStack" component={QuizHomeStack} options={{ headerShown: false }} />
+								<Drawer.Screen name="LogInStack" component={LogInStack} options={{ headerShown: false }} />
+								<Drawer.Screen name="SignUpStack" component={SignUpStack} options={{ headerShown: false }} />
+							</Drawer.Navigator>
+						</BevContextProvider>
+					</AuthContextProvider>
+				</UserProvider>
 			</AppProvider>
 		</NavigationContainer>
   );

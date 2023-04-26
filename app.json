@@ -1,4 +1,9 @@
 {
   "name": "PintsAndStems",
-  "displayName": "PintsAndStems"
+  "displayName": "PintsAndStems",
+  "extra": {
+    "eas": {
+      "projectId": "eb0d95b6-2f6f-49ea-b533-9ce84c36582b"
+    }
+  }
 }

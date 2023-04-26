@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://unpkg.com/realm-web/dist/bundle.iife.js"></script>
+		<script>
+			const appId = "pintsandstems-iuaox";
+			const app = new Realm.App({ id: appId });
+
+			const params = new URLSearchParams(window.location.search);
+			const token = params.get('token');
+			const tokenId = params.get('tokenId');
+			app.emailPasswordAuth
+				.confirmUser({
+					token: token, 
+					tokenId: tokenId
+				})
+				.then(() => displayResult("success"))
+				.catch(err => displayResult("error", err))
+
+			function displayResult(result, err) {
+				const message = document.getElementById("message");
+				
+				if (result === "success") {
+					message.innerText = "Your email has been verified.";
+				}
+				else if (result === "error") {
+					message.innerText = err;
+				}
+			}
+		</script>
+		<title>Confirm your email!</title>
+	</head>
+	<body>
+		<h3>Email Confirmation</h3>
+		<h5 id="message"></h5>
+	</body>
+</html>
