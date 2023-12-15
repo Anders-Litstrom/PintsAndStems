@@ -42,8 +42,9 @@ export default HomeStack;
 const Stack = createNativeStackNavigator();
 
 HomeStack = () => {
+console.log("HomeStack.js 45");
 	return (
-		<Stack.Navigator>
+		<Stack.Navigator initalRouteName="Home">
 			<Stack.Screen 
 				name="Home" 
 				component={Home} 

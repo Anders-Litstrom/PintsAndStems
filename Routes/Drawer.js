@@ -42,7 +42,8 @@ const RootDrawerNavigator = createDrawerNavigator({
 export default createAppContainer(RootDrawerNavigator);
 */
 
-	const Drawer = createDrawerNavigator();
+const Drawer = createDrawerNavigator();
+
 function RootDrawerNavigator() {
 	<Drawer.Navigator initialRouteName="Home">
 		<Drawer.Screen name="HomeStack" component={HomeStack} />

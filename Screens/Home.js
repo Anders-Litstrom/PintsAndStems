@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {View, StyleSheet, Text, FlatList, TouchableOpacity, Image, Button} from 'react-native';
+import { ErrorBoundary } from 'react-error-boundary';
 import WineCard from '../Shared/WineCard'
 import {Card} from 'react-native-elements'
 import {BevContext} from '../Shared/StateManagement'
@@ -49,8 +50,9 @@ const Home = ({ navigation }) => {
   badStuff = (err) => {
     console.log(err);
   }
-
+console.log("Home.js 53");
   return (
+		<ErrorBoundary fallback={<div>Something went wrong!</div>}>
     <View style={{justifyContent: 'center', backgroundColor: '#023F77', flex: 1}}>
       <View style={styles.welcomeTextContainer}>
         <Text style={styles.headerWelcomeText}>Welcome!</Text>
@@ -75,6 +77,7 @@ const Home = ({ navigation }) => {
         )}
       />
     </View>
+		</ErrorBoundary>
 	);
 };
 

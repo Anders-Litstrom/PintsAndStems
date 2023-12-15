@@ -11,6 +11,8 @@ const AuthContextProvider = ({ children }) => {
 		token: null
 	});
 
+	console.log("StateManagement.js 14");
+
 	return(
 		<AuthContext.Provider value={{ auth, setAuth }}>
 			{children}

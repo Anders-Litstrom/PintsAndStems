@@ -17,7 +17,7 @@ const QuizHome = ({ navigation }) => {
   return (
     <View>
       <View style={styles.welcomeTextContainer}>
-        <Text style={styles.headerWelcomeText}>Quiz Time,</Text>
+        <Text style={styles.headerWelcomeText}>Quiz Time</Text>
         <Text style={styles.headerUserText}>Choose Wisely</Text>
       </View>
       <View style={styles.bodyContainer}>
