@@ -3,23 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {createAppContainer} from '@react-navigation/native';
 import WineInfo from '../Screens/WineInfo'
 import Header from '../Shared/Header';
-/*
-const screens = {
-  WineInfo: {
-    screen: WineInfo,
-    navigationOptions: ({navigation}) => {
-      return {
-        title: 'Wine Info',
-        headerTitle: () => <Header navigation={navigation}/>,
-        headerStyle: {
-          height: 150,
-          backgroundColor: 'White',
-        }
-      }
-    }
-  }
-}
-*/
+
 const Stack = createNativeStackNavigator();
 
 const WineInfoStack = () => {

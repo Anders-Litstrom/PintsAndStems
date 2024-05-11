@@ -6,12 +6,6 @@ import dropDown from './../../Images/btn_dropdown.png'
 import {BevContext} from '../../Shared/StateManagement'
 
 
-/**
-						wine:		[{name: data.title[0], id: '1',description: data.variety[0], price:'', image:''},
-						{name: data.title[1], id: '2', description: data.variety[1], price: '', image: '' },
-						{name: data.title[2], id: '3', description: data.variety[2], price: '', image: ''}]
- **/
-
 const initialState = {
 	wine: [{}],
 	isFetching: false,
@@ -43,7 +37,7 @@ const reducer = (state, action) => {
 };
 
 export default function WineResults ({ navigation }) {
-//	const [state, dispatch] = React.useReducer(reducer, initialState);
+
 	const {setWine} = React.useContext(BevContext);
 	baseURL = 'http://18.220.99.150:8080/?bev=1';
 
@@ -64,9 +58,6 @@ export default function WineResults ({ navigation }) {
       	method: 'GET',
     	});
 		
-	//		dispatch({
-		//		type: "FETCH_WINE_REQUEST"
-			//});
     	fetch(req)
 				.then(response=>response.json())
 				.then((data) => {
@@ -78,14 +69,6 @@ export default function WineResults ({ navigation }) {
 					
     	navigation.navigate('Home');
 
-  	showData = (data) => {
-  		//dispatch({
-				//type:"FETCH_WINE_SUCCESS",
-				//payload: [{name: data.title[0], id: '1',description: data.variety[0], price:'', image:''},
-					//		{name: data.title[1], id: '2', description: data.variety[1], price: '', image: '' },
-						//	{name: data.title[2], id: '3', description: data.variety[2], price: '', image: ''}]
-			//});
-		}
   	badStuff = (err) => {
     	console.log(err);
   	}

@@ -22,24 +22,7 @@ import Home from './Screens/Home';
 
 const App = () => {
 	const Drawer = createDrawerNavigator();
-	/*
-  return (
-		<NavigationContainer>
-					<AuthContextProvider>
-						<BevContextProvider>
-							<Drawer.Navigator initialRouteName="HomeStack">
-								<Drawer.Screen name="HomeStack" component={Home} options={{ headerShown: false }} />
-								<Drawer.Screen name="MyListStack" component={MyListStack} options={{ headerShown: false }} />
-								<Drawer.Screen name="ProfileStack" component={ProfileStack} options={{ headerShown: false }} />
-								<Drawer.Screen name="WineIntroStack" component={WineIntroStack} options={{ headerShown: false }} />
-								<Drawer.Screen name="BeerIntroStack" component={BeerIntroStack} options={{ headerShown: false }} />
-								<Drawer.Screen name="QuizHomeStack" component={QuizHomeStack} options={{ headerShown: false }} />
-							</Drawer.Navigator>
-						</BevContextProvider>
-					</AuthContextProvider>
-		</NavigationContainer>
-  );
-*/	
+
   return (
 	<NavigationContainer>
 		<AppProvider id={appId} >

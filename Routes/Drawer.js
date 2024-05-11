@@ -11,36 +11,6 @@ import SignUpStack from './Account/SignUpStack';
 
 import Home from '../Screens/Home';
 import WineInfo from '../Screens/WineInfo';
-/*
-const RootDrawerNavigator = createDrawerNavigator({
-  Home: {
-    screen: HomeStack
-  },
-  'My List': {
-    screen: MyListStack
-  },
-  'My Profile': {
-    screen: ProfileStack
-  },
-  WineIntroStack: {
-    screen: WineIntroStack
-  },
-  BeerIntroStack: {
-    screen: BeerIntroStack
-  },
-  Quiz: {
-    screen: QuizHomeStack,
-  },
-	LogIn: {
-		screen: LogInStack
-	},
-	SignUp: {
-		screen: SignUpStack
-	}
-});
-
-export default createAppContainer(RootDrawerNavigator);
-*/
 
 const Drawer = createDrawerNavigator();
 

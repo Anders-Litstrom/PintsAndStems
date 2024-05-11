@@ -20,25 +20,7 @@ import BeerQuestion4 from './../Screens/Beer/BeerQuestion4';
 import BeerQuestion5 from './../Screens/Beer/BeerQuestion5';
 import BeerQuestion6 from './../Screens/Beer/BeerQuestion6';
 import BeerResults from './../Screens/Beer/BeerResults';
-/*
-const screens = {
-  QuizHome: {
-    screen: QuizHome,
-    navigationOptions: ({navigation}) => {
-      return {
-        title: 'Tasting Quiz',
-        headerTitle: () => <Header navigation={navigation}/>,
-        headerStyle: {
-          height: 150,
-          backgroundColor: 'White',
-        }
-      }
-    }
-  },
 
-
-}
-*/
 const Stack = createNativeStackNavigator();
 const QuizHomeStack = () => {
 	return (

@@ -51,5 +51,5 @@ const styles = StyleSheet.create({
   },
 
 });
-// switch to react-navigation 6.x, useNavigation hook
+
 export default Header;
